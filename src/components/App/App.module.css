@@ -1,0 +1,16 @@
+@import '../../stylesheet/fonts.css';
+@import '../../stylesheet/vars.css';
+
+.taskContainer {
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+  padding-top: 35px;
+}
+
+.taskContainer__title {
+  font-size: 38px;
+  color: #000;
+  font-family: 'PT SansBold', sans-serif;
+  margin-bottom: 65px;
+}

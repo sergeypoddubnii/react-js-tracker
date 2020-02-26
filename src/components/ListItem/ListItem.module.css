@@ -1,0 +1,52 @@
+@import '../../stylesheet/fonts.css';
+@import '../../stylesheet/vars.css';
+
+.listItem {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.listItem__text {
+  color: var(--main-color);
+  margin-right: 35px;
+  font-family: 'PT SansRegular', sans-serif;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listItem__timer {
+  color: var(--main-color);
+  font-family: 'PT SansBold', sans-serif;
+  margin-right: 28px;
+}
+
+.listItem__btn {
+  background: transparent;
+  border: none;
+  margin-right: 15px;
+}
+
+.listItem__btn_start,
+.listItem__btn_pause,
+.listItem__btn_delete {
+  width: 25px;
+  height: 25px;
+}
+
+.listItem__btn_start {
+  fill: var(--main-color);
+}
+
+.listItem__btn_pause {
+  fill: #000;
+}
+
+.listItem__btn_delete {
+  fill: #d2697a;
+}
