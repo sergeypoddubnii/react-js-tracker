@@ -9,23 +9,20 @@ const ListItem = ({
   task,
   deleteTask,
   timeCreated,
-  timePaused,
-  pauseTask,
+  currentTime,
+  toggleTask,
   isPaused,
-  startTask,
 }) => {
-  const initialT = !isPaused ? Date.now() - timeCreated : timePaused - timeCreated;
-  console.log(isPaused);
-  // let initialT = 0;
+  let initialT = 0;
 
-  // if (!isPaused) {
-  //   initialT = Date.now() - timeCreated;
-  // } else {
-  //   initialT = timePaused - timeCreated;
-  // }
+  if (currentTime) {
+    console.log('take paused time!');
+    initialT = currentTime;
+  } else {
+    console.log('take real time!');
+    initialT = Date.now() - timeCreated;
+  }
 
-  // console.log(timePaused);
-  // console.log('initialT', initialT);
   return (
     <li className={styles.listItem}>
       <p className={styles.listItem__text}>{task}</p>
@@ -39,26 +36,28 @@ const ListItem = ({
               <Timer.Seconds />
             </div>
             <div>
-              <button
-                onClick={() => {
-                  start();
-                  startTask();
-                }}
-                disabled={!isPaused}
-                className={styles.listItem__btn}
-              >
-                <StartTimer className={styles.listItem__btn_start} />
-              </button>
-              <button
-                onClick={() => {
-                  pause();
-                  pauseTask();
-                }}
-                disabled={isPaused}
-                className={styles.listItem__btn}
-              >
-                <PauseTimer className={styles.listItem__btn_pause} />
-              </button>
+              {isPaused && (
+                <button
+                  onClick={() => {
+                    start();
+                    toggleTask();
+                  }}
+                  className={styles.listItem__btn}
+                >
+                  <StartTimer className={styles.listItem__btn_start} />
+                </button>
+              )}
+              {!isPaused && (
+                <button
+                  onClick={() => {
+                    pause();
+                    toggleTask();
+                  }}
+                  className={styles.listItem__btn}
+                >
+                  <PauseTimer className={styles.listItem__btn_pause} />
+                </button>
+              )}
               <button type="button" onClick={deleteTask} className={styles.listItem__btn}>
                 <DeleteTask className={styles.listItem__btn_delete} />
               </button>

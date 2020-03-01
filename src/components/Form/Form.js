@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import actions from '../../redux/task/Actions';
 import styles from './Form.module.css';
 import { ReactComponent as AddTask } from '../../assets/icons/addTask.svg';
-const Form = ({ addToTasks }) => {
+
+const Form = ({ addTask }) => {
   const [task, setTask] = useState('');
 
   const handlerChangeTask = e => {
@@ -10,7 +13,7 @@ const Form = ({ addToTasks }) => {
 
   const handlerAddToTrackers = e => {
     e.preventDefault();
-    addToTasks(task);
+    addTask(task);
     setTask('');
   };
 
@@ -30,4 +33,8 @@ const Form = ({ addToTasks }) => {
   );
 };
 
-export default Form;
+const mapDispatchToProps = dispatch => {
+  return { addTask: task => dispatch(actions.addTask(task)) };
+};
+
+export default connect(null, mapDispatchToProps)(Form);
