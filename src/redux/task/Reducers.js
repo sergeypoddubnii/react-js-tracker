@@ -7,13 +7,24 @@ const taskReducer = (state = [], { type, payload }) => {
       return [...state, payload];
     case types.DELETE_TASK:
       return state.filter(task => task.id !== payload.id);
-    case types.TOGGLE_TASK:
+    case types.START_TRACKER:
       return state.map(task => {
         if (task.id === payload.id) {
           return {
             ...task,
-            currentTime: Date.now() - task.timeCreated,
-            isPaused: !task.isPaused,
+            startTime: Date.now(),
+            isPaused: false,
+          };
+        }
+        return task;
+      });
+    case types.PAUSE_TRACKER:
+      return state.map(task => {
+        if (task.id === payload.id) {
+          return {
+            ...task,
+            currentTime: payload.currentTime,
+            isPaused: true,
           };
         }
         return task;

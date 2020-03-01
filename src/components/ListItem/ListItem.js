@@ -7,27 +7,29 @@ import styles from './ListItem.module.css';
 
 const ListItem = ({
   task,
-  deleteTask,
-  timeCreated,
+  id,
+  startTime,
   currentTime,
-  toggleTask,
   isPaused,
+  startTracker,
+  pauseTracker,
+  deleteTask,
 }) => {
-  let initialT = 0;
+  let initialTime = 0;
 
-  if (currentTime) {
-    console.log('take paused time!');
-    initialT = currentTime;
-  } else {
-    console.log('take real time!');
-    initialT = Date.now() - timeCreated;
+  if (isPaused && currentTime) {
+    initialTime = currentTime;
+  } else if (currentTime) {
+    initialTime = Date.now() - startTime + currentTime;
+  } else if (!isPaused && !currentTime) {
+    initialTime = Date.now() - startTime;
   }
 
   return (
     <li className={styles.listItem}>
       <p className={styles.listItem__text}>{task}</p>
-      <Timer initialTime={initialT} startImmediately={!isPaused}>
-        {({ start, pause }) => (
+      <Timer initialTime={initialTime} startImmediately={!isPaused}>
+        {({ start, pause, getTime }) => (
           <>
             <div className={styles.listItem__timer}>
               <Timer.Days /> :
@@ -40,7 +42,7 @@ const ListItem = ({
                 <button
                   onClick={() => {
                     start();
-                    toggleTask();
+                    startTracker(id);
                   }}
                   className={styles.listItem__btn}
                 >
@@ -51,14 +53,18 @@ const ListItem = ({
                 <button
                   onClick={() => {
                     pause();
-                    toggleTask();
+                    pauseTracker(id, getTime());
                   }}
                   className={styles.listItem__btn}
                 >
                   <PauseTimer className={styles.listItem__btn_pause} />
                 </button>
               )}
-              <button type="button" onClick={deleteTask} className={styles.listItem__btn}>
+              <button
+                type="button"
+                onClick={() => deleteTask(id)}
+                className={styles.listItem__btn}
+              >
                 <DeleteTask className={styles.listItem__btn_delete} />
               </button>
             </div>

@@ -4,17 +4,20 @@ import { connect } from 'react-redux';
 import action from '../../redux/task/Actions';
 import selectors from '../../redux/task/Selectors';
 
-const List = ({ tasks, deleteTask, toggleTask }) => {
+const List = ({ tasks, deleteTask, startTracker, pauseTracker }) => {
+  console.log(tasks);
   const list = tasks.map(item => {
     return (
       <ListItem
         key={item.id}
+        id={item.id}
         task={item.task}
-        timeCreated={item.timeCreated}
+        startTime={item.startTime}
         currentTime={item.currentTime}
         isPaused={item.isPaused}
-        deleteTask={() => deleteTask(item.id)}
-        toggleTask={() => toggleTask(item.id)}
+        deleteTask={deleteTask}
+        startTracker={startTracker}
+        pauseTracker={pauseTracker}
       />
     );
   });
@@ -30,7 +33,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     deleteTask: id => dispatch(action.deleteTask(id)),
-    toggleTask: id => dispatch(action.toggleTask(id)),
+    startTracker: id => dispatch(action.startTracker(id)),
+    pauseTracker: (id, currentTime) => dispatch(action.pauseTracker(id, currentTime)),
   };
 };
 

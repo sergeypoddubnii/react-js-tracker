@@ -2,14 +2,16 @@ import types from './Types';
 import shortId from 'shortid';
 
 const addTask = task => {
+  const date = new Date();
+  const stringDate = `${date.getHours()}:${date.getMinutes()} ${date.getFullYear()}.${date.getMonth()}`;
   if (!task.trim()) {
     return {
       type: types.ADD_TASK,
       payload: {
-        task: Date.now(),
+        task: stringDate,
         id: shortId.generate(),
-        timeCreated: Date.now(),
-        timePaused: 0,
+        startTime: Date.now(),
+        currentTime: 0,
         isPaused: false,
       },
     };
@@ -19,8 +21,8 @@ const addTask = task => {
     payload: {
       task,
       id: shortId.generate(),
-      timeCreated: Date.now(),
-      timePaused: 0,
+      startTime: Date.now(),
+      currentTime: 0,
       isPaused: false,
     },
   };
@@ -35,13 +37,23 @@ const deleteTask = id => {
   };
 };
 
-const toggleTask = id => {
+const startTracker = id => {
   return {
-    type: types.TOGGLE_TASK,
+    type: types.START_TRACKER,
     payload: {
       id,
     },
   };
 };
 
-export default { addTask, deleteTask, toggleTask };
+const pauseTracker = (id, currentTime) => {
+  return {
+    type: types.PAUSE_TRACKER,
+    payload: {
+      id,
+      currentTime,
+    },
+  };
+};
+
+export default { addTask, deleteTask, startTracker, pauseTracker };

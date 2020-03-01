@@ -11,14 +11,14 @@ const Form = ({ addTask }) => {
     setTask(e.target.value);
   };
 
-  const handlerAddToTrackers = e => {
+  const handlerAddToTasks = e => {
     e.preventDefault();
     addTask(task);
     setTask('');
   };
 
   return (
-    <form onSubmit={handlerAddToTrackers} className={styles.form}>
+    <form onSubmit={handlerAddToTasks} className={styles.form}>
       <input
         type="text"
         placeholder="tracker name"
