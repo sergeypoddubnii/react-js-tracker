@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.8cf1aaa3.chunk.css",
-    "main.js": "/static/js/main.57c51635.chunk.js",
-    "main.js.map": "/static/js/main.57c51635.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5b50bb1e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5b50bb1e.js.map",
-    "static/js/2.1953f3ba.chunk.js": "/static/js/2.1953f3ba.chunk.js",
-    "static/js/2.1953f3ba.chunk.js.map": "/static/js/2.1953f3ba.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.2bea7c6b1308326e8feb1d3f836a53ee.js": "/precache-manifest.2bea7c6b1308326e8feb1d3f836a53ee.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.8cf1aaa3.chunk.css.map": "/static/css/main.8cf1aaa3.chunk.css.map",
-    "static/js/2.1953f3ba.chunk.js.LICENSE": "/static/js/2.1953f3ba.chunk.js.LICENSE",
-    "static/media/addTask.108cbd14.svg": "/static/media/addTask.108cbd14.svg",
-    "static/media/delete-timer.e9e9553d.svg": "/static/media/delete-timer.e9e9553d.svg",
-    "static/media/pause.1560dca6.svg": "/static/media/pause.1560dca6.svg",
-    "static/media/main.css": "/static/media/pt-sans-v11-latin_cyrillic-regular.62c0aed1.woff2",
-    "static/media/start-timer.be88024f.svg": "/static/media/start-timer.be88024f.svg"
+    "main.css": "tracker/static/css/main.df4cbf85.chunk.css",
+    "main.js": "tracker/static/js/main.57c51635.chunk.js",
+    "main.js.map": "tracker/static/js/main.57c51635.chunk.js.map",
+    "runtime-main.js": "tracker/static/js/runtime-main.fc449bfe.js",
+    "runtime-main.js.map": "tracker/static/js/runtime-main.fc449bfe.js.map",
+    "static/js/2.1953f3ba.chunk.js": "tracker/static/js/2.1953f3ba.chunk.js",
+    "static/js/2.1953f3ba.chunk.js.map": "tracker/static/js/2.1953f3ba.chunk.js.map",
+    "index.html": "tracker/index.html",
+    "precache-manifest.52fa3a586b63512808cd5108df1db71d.js": "tracker/precache-manifest.52fa3a586b63512808cd5108df1db71d.js",
+    "service-worker.js": "tracker/service-worker.js",
+    "static/css/main.df4cbf85.chunk.css.map": "tracker/static/css/main.df4cbf85.chunk.css.map",
+    "static/js/2.1953f3ba.chunk.js.LICENSE": "tracker/static/js/2.1953f3ba.chunk.js.LICENSE",
+    "static/media/addTask.108cbd14.svg": "tracker/static/media/addTask.108cbd14.svg",
+    "static/media/delete-timer.e9e9553d.svg": "tracker/static/media/delete-timer.e9e9553d.svg",
+    "static/media/pause.1560dca6.svg": "tracker/static/media/pause.1560dca6.svg",
+    "static/media/main.css": "tracker/static/media/pt-sans-v11-latin_cyrillic-regular.62c0aed1.woff2",
+    "static/media/start-timer.be88024f.svg": "tracker/static/media/start-timer.be88024f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b50bb1e.js",
+    "static/js/runtime-main.fc449bfe.js",
     "static/js/2.1953f3ba.chunk.js",
-    "static/css/main.8cf1aaa3.chunk.css",
+    "static/css/main.df4cbf85.chunk.css",
     "static/js/main.57c51635.chunk.js"
   ]
 }
