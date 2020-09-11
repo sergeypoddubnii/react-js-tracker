@@ -1,22 +1,19 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import Timer from 'react-compound-timer';
 import { ReactComponent as StartTimer } from '../../assets/icons/start-timer.svg';
 import { ReactComponent as PauseTimer } from '../../assets/icons/pause.svg';
 import { ReactComponent as DeleteTask } from '../../assets/icons/delete-timer.svg';
+import actions from '../../redux/task/Actions';
 import styles from './ListItem.module.css';
 
-const ListItem = ({
-  task,
-  id,
-  startTime,
-  currentTime,
-  isPaused,
-  startTracker,
-  pauseTracker,
-  deleteTask,
-}) => {
+const ListItem = ({ task, id, startTime, currentTime, isPaused, deleteTask }) => {
   let initialTime = 0;
-
+  const dispatch = useDispatch();
+  const handlerDeleteTask = () => {
+    dispatch(actions.deleteTask(id));
+  };
+  //start stop task tracker
   if (isPaused && currentTime) {
     initialTime = currentTime;
   } else if (currentTime) {
@@ -24,7 +21,6 @@ const ListItem = ({
   } else if (!isPaused && !currentTime) {
     initialTime = Date.now() - startTime;
   }
-
   return (
     <li className={styles.listItem}>
       <p className={styles.listItem__text}>{task}</p>
@@ -42,7 +38,7 @@ const ListItem = ({
                 <button
                   onClick={() => {
                     start();
-                    startTracker(id);
+                    dispatch(actions.startTracker(id));
                   }}
                   className={styles.listItem__btn}
                 >
@@ -53,7 +49,7 @@ const ListItem = ({
                 <button
                   onClick={() => {
                     pause();
-                    pauseTracker(id, getTime());
+                    dispatch(actions.pauseTracker(id, getTime()));
                   }}
                   className={styles.listItem__btn}
                 >
@@ -62,7 +58,7 @@ const ListItem = ({
               )}
               <button
                 type="button"
-                onClick={() => deleteTask(id)}
+                onClick={handlerDeleteTask}
                 className={styles.listItem__btn}
               >
                 <DeleteTask className={styles.listItem__btn_delete} />

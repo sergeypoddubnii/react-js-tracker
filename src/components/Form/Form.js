@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import actions from '../../redux/task/Actions';
 import styles from './Form.module.css';
 import { ReactComponent as AddTask } from '../../assets/icons/addTask.svg';
 
-const Form = ({ addTask }) => {
+const Form = () => {
+  const dispatch = useDispatch();
   const [task, setTask] = useState('');
 
-  const handlerChangeTask = e => {
+  const handlerChangeInput = e => {
     setTask(e.target.value);
   };
 
   const handlerAddToTasks = e => {
     e.preventDefault();
-    addTask(task);
+    dispatch(actions.addTask(task));
     setTask('');
   };
 
@@ -22,7 +23,7 @@ const Form = ({ addTask }) => {
       <input
         type="text"
         placeholder="tracker name"
-        onChange={handlerChangeTask}
+        onChange={handlerChangeInput}
         value={task}
         className={styles.form__input}
       />
@@ -33,8 +34,4 @@ const Form = ({ addTask }) => {
   );
 };
 
-const mapDispatchToProps = dispatch => {
-  return { addTask: task => dispatch(actions.addTask(task)) };
-};
-
-export default connect(null, mapDispatchToProps)(Form);
+export default Form;
