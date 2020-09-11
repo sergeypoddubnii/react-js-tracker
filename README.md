@@ -1,7 +1,13 @@
-Page:https://sergeypoddubnii.github.io/tracker/
+## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Page:https://sergeypoddubnii.github.io/tracker/
 
-Tools & Technologies: JavaScript, CSS3, ES6, React, Redux, Webpack.
+##Tools & Technologies: 
+  * JavaScript / ES6 
+  * React(hooks) / redux / redux-persist
+  * CSS/ CSS-modules / normalize.css
+  * Webpack 
+  * react-compound-timer / shortid
+##
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
