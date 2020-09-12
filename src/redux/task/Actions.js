@@ -2,20 +2,6 @@ import types from './Types';
 import shortId from 'shortid';
 
 const addTask = task => {
-  const date = new Date();
-  const stringDate = `${date.getHours()}:${date.getMinutes()} ${date.getFullYear()}.${date.getMonth()}`;
-  if (!task.trim()) {
-    return {
-      type: types.ADD_TASK,
-      payload: {
-        task: stringDate,
-        id: shortId.generate(),
-        startTime: Date.now(),
-        currentTime: 0,
-        isPaused: false,
-      },
-    };
-  }
   return {
     type: types.ADD_TASK,
     payload: {
