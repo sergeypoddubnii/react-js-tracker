@@ -7,15 +7,22 @@ import { ReactComponent as AddTask } from '../../assets/icons/addTask.svg';
 const Form = () => {
   const dispatch = useDispatch();
   const [task, setTask] = useState('');
+  const [disabled, setDisabled] = useState(true);
 
   const handlerChangeInput = e => {
     setTask(e.target.value);
+    if (e.target.value.trim().length === 0) {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
   };
 
   const handlerAddToTasks = e => {
     e.preventDefault();
     dispatch(actions.addTask(task));
     setTask('');
+    setDisabled(true);
   };
 
   return (
@@ -27,7 +34,7 @@ const Form = () => {
         value={task}
         className={styles.form__input}
       />
-      <button type="submit" className={styles.form__btn}>
+      <button type="submit" className={styles.form__btn} disabled={disabled}>
         <AddTask className={styles.form__icon} />
       </button>
     </form>
