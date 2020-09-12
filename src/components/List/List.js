@@ -5,6 +5,7 @@ import selectors from '../../redux/task/Selectors';
 
 const List = () => {
   const tasks = useSelector(selectors.getTasks);
+
   const list = useMemo(() => {
     return tasks.map(item => {
       return (
