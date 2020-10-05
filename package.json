@@ -21,7 +21,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://sergeypoddubnii.github.io/tracker",
+  "homepage": "https://sergeypoddubnii.github.io/react-js-tracker",
   "eslintConfig": {
     "extends": "react-app"
   },
