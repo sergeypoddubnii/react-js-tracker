@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/tracker/static/css/main.e0ea7b2a.chunk.css",
-    "main.js": "/tracker/static/js/main.53d7dd33.chunk.js",
-    "main.js.map": "/tracker/static/js/main.53d7dd33.chunk.js.map",
-    "runtime-main.js": "/tracker/static/js/runtime-main.fb5ee033.js",
-    "runtime-main.js.map": "/tracker/static/js/runtime-main.fb5ee033.js.map",
-    "static/js/2.bb4f8829.chunk.js": "/tracker/static/js/2.bb4f8829.chunk.js",
-    "static/js/2.bb4f8829.chunk.js.map": "/tracker/static/js/2.bb4f8829.chunk.js.map",
-    "index.html": "/tracker/index.html",
-    "precache-manifest.35a36e2e9e04bb8dbf749c23d0a25ee1.js": "/tracker/precache-manifest.35a36e2e9e04bb8dbf749c23d0a25ee1.js",
-    "service-worker.js": "/tracker/service-worker.js",
-    "static/css/main.e0ea7b2a.chunk.css.map": "/tracker/static/css/main.e0ea7b2a.chunk.css.map",
-    "static/js/2.bb4f8829.chunk.js.LICENSE": "/tracker/static/js/2.bb4f8829.chunk.js.LICENSE",
-    "static/media/addTask.108cbd14.svg": "/tracker/static/media/addTask.108cbd14.svg",
-    "static/media/delete-timer.e9e9553d.svg": "/tracker/static/media/delete-timer.e9e9553d.svg",
-    "static/media/pause.1560dca6.svg": "/tracker/static/media/pause.1560dca6.svg",
-    "static/media/main.css": "/tracker/static/media/pt-sans-v11-latin_cyrillic-regular.62c0aed1.woff2",
-    "static/media/start-timer.be88024f.svg": "/tracker/static/media/start-timer.be88024f.svg"
+    "main.css": "/react-js-tracker/static/css/main.f4b93f7e.chunk.css",
+    "main.js": "/react-js-tracker/static/js/main.8642e581.chunk.js",
+    "main.js.map": "/react-js-tracker/static/js/main.8642e581.chunk.js.map",
+    "runtime-main.js": "/react-js-tracker/static/js/runtime-main.8eb476b6.js",
+    "runtime-main.js.map": "/react-js-tracker/static/js/runtime-main.8eb476b6.js.map",
+    "static/js/2.1d7785c0.chunk.js": "/react-js-tracker/static/js/2.1d7785c0.chunk.js",
+    "static/js/2.1d7785c0.chunk.js.map": "/react-js-tracker/static/js/2.1d7785c0.chunk.js.map",
+    "index.html": "/react-js-tracker/index.html",
+    "precache-manifest.f8cd3cefb2bf7831af930b3c54a362ce.js": "/react-js-tracker/precache-manifest.f8cd3cefb2bf7831af930b3c54a362ce.js",
+    "service-worker.js": "/react-js-tracker/service-worker.js",
+    "static/css/main.f4b93f7e.chunk.css.map": "/react-js-tracker/static/css/main.f4b93f7e.chunk.css.map",
+    "static/js/2.1d7785c0.chunk.js.LICENSE": "/react-js-tracker/static/js/2.1d7785c0.chunk.js.LICENSE",
+    "static/media/addTask.108cbd14.svg": "/react-js-tracker/static/media/addTask.108cbd14.svg",
+    "static/media/delete-timer.e9e9553d.svg": "/react-js-tracker/static/media/delete-timer.e9e9553d.svg",
+    "static/media/pause.1560dca6.svg": "/react-js-tracker/static/media/pause.1560dca6.svg",
+    "static/media/main.css": "/react-js-tracker/static/media/pt-sans-v11-latin_cyrillic-regular.62c0aed1.woff2",
+    "static/media/start-timer.be88024f.svg": "/react-js-tracker/static/media/start-timer.be88024f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fb5ee033.js",
-    "static/js/2.bb4f8829.chunk.js",
-    "static/css/main.e0ea7b2a.chunk.css",
-    "static/js/main.53d7dd33.chunk.js"
+    "static/js/runtime-main.8eb476b6.js",
+    "static/js/2.1d7785c0.chunk.js",
+    "static/css/main.f4b93f7e.chunk.css",
+    "static/js/main.8642e581.chunk.js"
   ]
 }
