@@ -2,7 +2,7 @@
 
 ##This app is a simple time tracker
 
-##Page:https://sergeypoddubnii.github.io/tracker/
+##Page:https://sergeypoddubnii.github.io/react-js-tracker/
 
 ##Tools & Technologies: 
   * JavaScript / ES6 
